@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Player : MonoBehaviour {
+public class my_CarController : MonoBehaviour {
     public float Zspeed = 150f;
     public float torque = 4f;
 
