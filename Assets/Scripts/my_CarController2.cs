@@ -7,7 +7,7 @@ public class my_CarController2 : MonoBehaviour {
     public float forwardSpeed = 40f;
     //rotate
     public float rotateFactor = 100f;
-    bool isGrounded;
+    public bool isGrounded;
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,5 +29,9 @@ public class my_CarController2 : MonoBehaviour {
     void OnCollisionStay()
     {
         isGrounded = true;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
     }
 }
