@@ -18,8 +18,8 @@ public class UImanager : MonoBehaviour {
     {
         SceneManager.LoadScene("level1");
     }
-    public void exit()
+    public void m_exit()
     {
-        SceneManager.LoadScene("level1");
+        Application.Quit() ;
     }
 }
