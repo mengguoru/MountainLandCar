@@ -17,6 +17,8 @@ public class DialogueController : MonoBehaviour {
     //controll dialogist image visible
     public GameObject dialogist1;
     public GameObject dialogist2;
+    //send end dialogue message
+    public GameObject msgReceiver;
     // Use this for initialization
     void Start () {
         txtLines = txtFile.text.Split('\n');
@@ -50,8 +52,10 @@ public class DialogueController : MonoBehaviour {
     }
     public void endDialogue()
     {
-        foreach (var i in objs)
-            i.SetActive(false);
+        //foreach (var i in objs)
+        //    i.SetActive(false);
+        msgReceiver.SendMessage("overDialogue");
+
     }
     private IEnumerator TextScroll(string str)
     {
