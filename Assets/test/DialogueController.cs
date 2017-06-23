@@ -14,6 +14,9 @@ public class DialogueController : MonoBehaviour {
     public bool isTyping;
     public bool cancelTyping;
     public float typeInterval;
+    //controll dialogist image visible
+    public GameObject dialogist1;
+    public GameObject dialogist2;
     // Use this for initialization
     void Start () {
         txtLines = txtFile.text.Split('\n');
@@ -31,6 +34,7 @@ public class DialogueController : MonoBehaviour {
 	}
     public void next()
     {
+        //Debug.Log("next");
         if(!isTyping)
         {
             currentTxt++;
@@ -51,6 +55,9 @@ public class DialogueController : MonoBehaviour {
     }
     private IEnumerator TextScroll(string str)
     {
+        dialogist1.SetActive(currentTxt%2 == 0);
+        dialogist2.SetActive(currentTxt % 2 == 1);
+
         showTxt.text = "";
         isTyping = true;
         cancelTyping = false;
