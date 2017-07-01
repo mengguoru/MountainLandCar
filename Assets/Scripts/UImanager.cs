@@ -26,6 +26,10 @@ public class UImanager : MonoBehaviour {
     {
         mWarning = !mWarning;
     }
+    public void toSceneOnline()
+    {
+        SceneManager.LoadScene("level_online");
+    }
 
     private void OnGUI()
     {
