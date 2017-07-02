@@ -28,7 +28,8 @@ public class UImanager : MonoBehaviour {
     }
     public void toSceneOnline()
     {
-        SceneManager.LoadScene("level_online");
+        //SceneManager.LoadScene("level_online");
+        SceneManager.LoadScene("level_online_mobile");
     }
 
     private void OnGUI()
