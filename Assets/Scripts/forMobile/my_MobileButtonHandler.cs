@@ -5,6 +5,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class my_MobileButtonHandler : MonoBehaviour {
     public string Name;
+    public string buttonName;
 
     void OnEnable()
     {
@@ -16,8 +17,10 @@ public class my_MobileButtonHandler : MonoBehaviour {
     }
     public void SetDownState()
     {
-        CrossPlatformInputManager.SetButtonDown(Name);
-        Debug.Log(Name + " : negative" + CrossPlatformInputManager.GetAxis(Name));
+        //CrossPlatformInputManager.SetButtonDown(Name);
+        
+        CrossPlatformInputManager.SetButtonDown(buttonName);
+        Debug.Log(Name + " : " + CrossPlatformInputManager.GetAxis(Name));
     }
 
 
@@ -30,6 +33,7 @@ public class my_MobileButtonHandler : MonoBehaviour {
     public void SetAxisPositiveState()
     {
         CrossPlatformInputManager.SetAxisPositive(Name);
+        Debug.Log(Name + " : " + CrossPlatformInputManager.GetAxis(Name));
     }
 
 
@@ -42,7 +46,7 @@ public class my_MobileButtonHandler : MonoBehaviour {
     public void SetAxisNegativeState()
     {
         CrossPlatformInputManager.SetAxisNegative(Name);
-        //Debug.Log(Name + " : negative" + CrossPlatformInputManager.GetAxis(Name));
+        Debug.Log(Name + " : " + CrossPlatformInputManager.GetAxis(Name));
         //CrossPlatformInputManager.GetButtonDown("a");
     }
 
