@@ -40,7 +40,8 @@ public class DialogueController : MonoBehaviour {
         if(!isTyping)
         {
             currentTxt++;
-            if (txtLines.Length - 1 == currentTxt)
+            //so although txtLines don't need,but is needed for function use!!!
+            if (txtLines.Length-1 == currentTxt)
                 endDialogue();
             else
                 StartCoroutine(TextScroll(txtLines[currentTxt]));
