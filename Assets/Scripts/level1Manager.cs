@@ -12,6 +12,9 @@ public class level1Manager : MonoBehaviour {
     int state = 0;
     //state 1 
     public GameObject dialogue;
+    //skip button
+    public GameObject skipButton;
+
 	// Use this for initialization
 	void Start () {
         m_start = false;
@@ -62,7 +65,11 @@ public class level1Manager : MonoBehaviour {
     {
         state++;
     }
-
+    public void forSkipButton()
+    {
+        state = 2;
+        Destroy(skipButton);
+    }
     void activeArray(GameObject[] objs,bool isActive)
     {
         foreach (var i in objs)
