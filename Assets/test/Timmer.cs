@@ -13,9 +13,9 @@ public class Timmer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	//void Update () {
 		
-	}
+	//}
 
     IEnumerator Count()
     {
@@ -30,6 +30,6 @@ public class Timmer : MonoBehaviour {
     }
     void GameOver()
     {
-
+        Debug.Log("level1 game over");
     }
 }

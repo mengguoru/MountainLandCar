@@ -16,7 +16,8 @@ public class Player : MonoBehaviour {
     //}
     private void OnTriggerEnter(Collider other)
     {
+        //for scene2 
         if ("endpoint" == other.name)
-            SceneManager.LoadScene("level2");
+            SceneManager.LoadScene("level3");
     }
 }
