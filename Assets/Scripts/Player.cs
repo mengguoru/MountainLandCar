@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
             SceneManager.LoadScene("level3");
         if("oil" == other.tag)
         {
-            Debug.Log("oil");
+            //Debug.Log("oil");
             Destroy(other.transform.root.gameObject);
             getOil();
         }
