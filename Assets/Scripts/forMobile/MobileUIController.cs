@@ -8,4 +8,8 @@ public class MobileUIController : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void toSelectScene()
+    {
+        SceneManager.LoadScene("choose_level");
+    }
 }
