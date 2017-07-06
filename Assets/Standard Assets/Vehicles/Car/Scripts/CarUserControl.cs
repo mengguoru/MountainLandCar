@@ -26,12 +26,13 @@ namespace UnityStandardAssets.Vehicles.Car
             //Debug.Log(h + ":" + v);
 
             m_Car.Move(h, v, v, 0f);
-//#if !MOBILE_INPUT
-//            float handbrake = CrossPlatformInputManager.GetAxis("Jump");
-//            m_Car.Move(h, v, v, handbrake);
-//#else
-//            m_Car.Move(h, v, v, 0f);
-//#endif
+            //m_Car.Move(h, v, 0, 0f);
+            //#if !MOBILE_INPUT
+            //            float handbrake = CrossPlatformInputManager.GetAxis("Jump");
+            //            m_Car.Move(h, v, v, handbrake);
+            //#else
+            //            m_Car.Move(h, v, v, 0f);
+            //#endif
         }
     }
 }

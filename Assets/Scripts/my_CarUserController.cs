@@ -19,6 +19,7 @@ namespace MyCarGame.Car
         {
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
+            //Debug.Log(h + ":" + v);
             m_Car.Move(h, v);
         }
     }
