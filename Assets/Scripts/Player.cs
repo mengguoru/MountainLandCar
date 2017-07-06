@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
     {
         //for scene2 
         if ("endpoint" == other.name)
-            SceneManager.LoadScene("level3");
+            SceneManager.LoadScene("choose_level");
         if("oil" == other.tag)
         {
             //Debug.Log("oil");
