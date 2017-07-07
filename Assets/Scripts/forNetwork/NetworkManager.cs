@@ -125,10 +125,10 @@ public class NetworkManager : MonoBehaviour {
         otherPlayer = GameObject.Instantiate(carPreb.gameObject, spawnPos[currentNum].position, spawnPos[currentNum].rotation);
 
         //disable useless component
-        Destroy(otherPlayer.gameObject.GetComponent<Rigidbody>());
         Destroy(otherPlayer.gameObject.GetComponent<CarUserControl>());
         Destroy(otherPlayer.gameObject.GetComponent<CarAudio>());
         Destroy(otherPlayer.gameObject.GetComponent<CarController>());
+        Destroy(otherPlayer.gameObject.GetComponent<Rigidbody>());
         //disable child object except for car model
         for (int i=0;i<otherPlayer.transform.childCount;i++)
         {

@@ -60,8 +60,10 @@ public class DialogueController : MonoBehaviour {
     }
     private IEnumerator TextScroll(string str)
     {
-        dialogist1.SetActive(currentTxt%2 == 0);
-        dialogist2.SetActive(currentTxt % 2 == 1);
+        if(null != dialogist1)
+            dialogist1.SetActive(currentTxt % 2 == 0);
+        if(null != dialogist2)
+            dialogist2.SetActive(currentTxt % 2 == 1);
 
         showTxt.text = "";
         isTyping = true;
